@@ -1,58 +1,47 @@
 import Accordion from 'react-bootstrap/Accordion';
 
-function AllCollapseExample() {
+function Faqs() {
+  const faqItems = [
+    {
+      question: "What makes Soul Kind different from other creative studios?",
+      answer: "Soul Kind combines artistic creativity with web3 technology and community-driven storytelling. We're not just a studio - we're a movement that empowers artists through our fund and involves our community in the creative process."
+    },
+    {
+      question: "How does the Soul Kind Fund support artists?",
+      answer: "Our fund provides financial freedom for artists to focus on their craft without economic dependencies. We offer grants, resources, and mentorship to help visionary creators bring their most ambitious projects to life."
+    },
+    {
+      question: "What is community-driven storytelling?",
+      answer: "Community-driven storytelling means our audience helps shape the narratives, characters, and worlds we create. Through our platform, fans can contribute ideas, vote on story directions, and become active participants in the creative journey."
+    },
+    {
+      question: "How does web3 technology enhance your storytelling?",
+      answer: "Web3 enables true ownership of digital assets, decentralized governance of our creative universe, and new ways for fans to engage with our stories through NFTs, DAOs, and immersive metaverse experiences."
+    },
+    {
+      question: "Can I join the Soul Kind creative community?",
+      answer: "Absolutely! We welcome artists, writers, designers, and storytellers from all backgrounds. Join our Discord community, participate in our creative challenges, or apply for opportunities through our careers page."
+    },
+    {
+      question: "What formats will Soul Kind stories be available in?",
+      answer: "We're developing stories across multiple formats including animated series, graphic novels, games, immersive AR/VR experiences, and interactive web3 platforms to create a truly interconnected universe."
+    }
+  ];
+
   return (
-    <Accordion>
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>Accordion Item #1</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="1">
-        <Accordion.Header>Accordion Item #2</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-        <Accordion.Item eventKey="3">
-        <Accordion.Header>Accordion Item #3</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
+    <Accordion className="soulkind-accordion">
+      {faqItems.map((item, index) => (
+        <Accordion.Item key={index} eventKey={index.toString()} className="soulkind-accordion-item">
+          <Accordion.Header className="soulkind-accordion-header">
+            {item.question}
+          </Accordion.Header>
+          <Accordion.Body className="soulkind-accordion-body">
+            {item.answer}
+          </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="4">
-        <Accordion.Header>Accordion Item #4</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-        </Accordion.Item>
+      ))}
     </Accordion>
   );
 }
 
-export default AllCollapseExample;
+export default Faqs;

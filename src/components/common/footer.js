@@ -1,154 +1,130 @@
-import React from 'react'
+import React from 'react';
 
-const footer = () => {
+const Footer = () => {
   return (
-    <>
-  <div className="b-example-divider" />
-  <div className="container">
-    <footer className="py-5">
-      <div className="row">
-        <div className="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul className="nav flex-column">
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Home
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Features
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                FAQs
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                About
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul className="nav flex-column">
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Home
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Features
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                FAQs
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                About
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul className="nav flex-column">
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Home
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Features
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                FAQs
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                About
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="col-md-5 offset-md-1 mb-3">
-          <form>
-            <h5>Subscribe to our newsletter</h5>
-            <p>Monthly digest of what's new and exciting from us.</p>
-            <div className="d-flex flex-column flex-sm-row w-100 gap-2">
-              <label htmlFor="newsletter1" className="visually-hidden">
-                Email address
-              </label>
-              <input
-                id="newsletter1"
-                type="text"
-                className="form-control"
-                placeholder="Email address"
-              />
-              <button className="btn btn-primary" type="button">
-                Subscribe
-              </button>
+    <footer className="soulkind-footer">
+      <div className="container">
+        {/* Main Footer Content */}
+        <div className="footer-content">
+          <div className="row">
+            {/* Brand Section */}
+            <div className="col-lg-4 col-md-6 mb-5">
+              <div className="footer-brand">
+                <div className="footer-logo">
+                  <i className="fas fa-palette"></i>
+                  Soul Kind
+                </div>
+                <p className="footer-tagline">
+                  Art and kindness are our tools of trade. We're building a creative universe powered by community and web3 technology.
+                </p>
+                <div className="footer-social">
+                  <a href="#" className="social-icon">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" className="social-icon">
+                    <i className="fab fa-discord"></i>
+                  </a>
+                  <a href="#" className="social-icon">
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" className="social-icon">
+                    <i className="fab fa-youtube"></i>
+                  </a>
+                  <a href="#" className="social-icon">
+                    <i className="fab fa-linkedin"></i>
+                  </a>
+                </div>
+              </div>
             </div>
-          </form>
+
+            {/* Quick Links */}
+            <div className="col-lg-2 col-md-6 mb-5">
+              <h5 className="footer-heading">Explore</h5>
+              <ul className="footer-links">
+                <li><a href="#universe">Our Universe</a></li>
+                <li><a href="#stayhuman">Staysoul</a></li>
+                <li><a href="#mission">Our Mission</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#faq">FAQ</a></li>
+              </ul>
+            </div>
+
+            {/* Studios */}
+            <div className="col-lg-2 col-md-6 mb-5">
+              <h5 className="footer-heading">Studios</h5>
+              <ul className="footer-links">
+                <li><a href="#">Animation</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Interactive</a></li>
+                <li><a href="#">AR/VR</a></li>
+                <li><a href="#">Web3</a></li>
+              </ul>
+            </div>
+
+            {/* Community */}
+            <div className="col-lg-2 col-md-6 mb-5">
+              <h5 className="footer-heading">Community</h5>
+              <ul className="footer-links">
+                <li><a href="#">Join Discord</a></li>
+                <li><a href="#">Artist Portal</a></li>
+                <li><a href="#">Creative Challenges</a></li>
+                <li><a href="#">Governance</a></li>
+                <li><a href="#">Events</a></li>
+              </ul>
+            </div>
+
+            {/* Newsletter */}
+            <div className="col-lg-2 col-md-6 mb-5">
+              <h5 className="footer-heading">Stay Connected</h5>
+              <p className="footer-text">Get updates on new stories, creative insights, and community events.</p>
+              <form className="newsletter-form">
+                <div className="input-group">
+                  <input 
+                    type="email" 
+                    className="form-control" 
+                    placeholder="Your email" 
+                    aria-label="Email address"
+                  />
+                  <button className="btn-newsletter" type="submit">
+                    <i className="fas fa-paper-plane"></i>
+                  </button>
+                </div>
+                <div className="form-text">
+                  By subscribing, you agree to our Privacy Policy
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="footer-divider"></div>
+
+        {/* Bottom Bar */}
+        <div className="footer-bottom">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <p className="copyright">
+                © 2024 Soul Kind. All rights reserved. Art and kindness are our tools of trade.
+              </p>
+            </div>
+            <div className="col-md-6">
+              <div className="footer-legal">
+                <a href="#" className="legal-link">Privacy Policy</a>
+                <a href="#" className="legal-link">Terms of Service</a>
+                <a href="#" className="legal-link">Cookie Policy</a>
+                <a href="#" className="legal-link">Artists Agreement</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-        <p>© 2024 Company, Inc. All rights reserved.</p>
-        <ul className="list-unstyled d-flex">
-          <li className="ms-3">
-            <a className="link-body-emphasis" href="#">
-              <svg className="bi" width={24} height={24}>
-                <use xlinkHref="#twitter" />
-              </svg>
-            </a>
-          </li>
-          <li className="ms-3">
-            <a className="link-body-emphasis" href="#">
-              <svg className="bi" width={24} height={24}>
-                <use xlinkHref="#instagram" />
-              </svg>
-            </a>
-          </li>
-          <li className="ms-3">
-            <a className="link-body-emphasis" href="#">
-              <svg className="bi" width={24} height={24}>
-                <use xlinkHref="#facebook" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
+
+      {/* Background Elements */}
+      <div className="footer-bg-element footer-bg-1"></div>
+      <div className="footer-bg-element footer-bg-2"></div>
     </footer>
-  </div>
-</>
+  );
+};
 
-  )
-}
-
-export default footer
+export default Footer;

@@ -4,151 +4,142 @@ import Card from 'react-bootstrap/Card';
 import Faqs from '../components/frequent/faqs';
 import Footer from '../components/common/footer';
 import Blog from '../components/frequent/blog';
-import hero from '../assets/img/banner.png'
+import hero from '../assets/img/banner.png';
+import useSoulKindAnimations from '../components/common/SoulKindAnimation';
 
-const landing = () => {
+// Import Bootstrap CSS and custom styles
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './SoulKind.css'; // We'll create this CSS file
+
+const SoulKind = () => {
+  useSoulKindAnimations();
   return (
     <>
-      <div className="container my-5">
-  <div className="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-    <div className="col-lg-7 p-3 p-lg-5 pt-lg-3">
-      <h1 className="display-4 fw-bold lh-1 text-body-emphasis">
-        Border hero with cropped image and shadows
-      </h1>
-      <p className="lead">
-        Quickly design and customize responsive mobile-first sites with
-        Bootstrap, the world’s most popular front-end open source toolkit,
-        featuring Sass variables and mixins, responsive grid system, extensive
-        prebuilt components, and powerful JavaScript plugins.
-      </p>
-      <div className="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-        <button
-          type="button"
-          className="btn btn-primary btn-lg px-4 me-md-2 fw-bold"
-        >
-          Primary
-        </button>
-        <button type="button" className="btn btn-outline-secondary btn-lg px-4">
-          Default
-        </button>
-      </div>
-    </div>
-    <div className="col-lg-4 offset-lg-1 p-0 overflow-hidden">
-      <center>
-      <img
-        className="rounded-lg-3"
-        src={hero}
-        alt=""
-        width="60%"
-      />
-      </center>
-    </div>
-  </div>
-</div>
 
-
-
-<div className="container px-4 py-5">
-  <h2 className="pb-2 border-bottom">Features with title</h2>
-  <div className="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
-    <div className="col d-flex flex-column align-items-start gap-2">
-      <h2 className="fw-bold text-body-emphasis">
-        Left-aligned title explaining these awesome features
-      </h2>
-      <p className="text-body-secondary">
-        Paragraph of text beneath the heading to explain the heading. We'll add
-        onto it with another sentence and probably just keep going until we run
-        out of words.
-      </p>
-      <a href="#" className="btn btn-primary btn-lg">
-        Primary button
-      </a>
-    </div>
-    <div className="col">
-      <div className="row row-cols-1 row-cols-sm-2 g-4">
-        <div className="col d-flex flex-column gap-2">
-          <div className="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-            <svg className="bi" width="1em" height="1em">
-              <use xlinkHref="#collection" />
-            </svg>
+      {/* Hero Section */}
+      <section className="soulkind-hero">
+        <div className="container">
+          <div className="hero-content">
+            <div className="tagline">
+              <i className="fas fa-heart"></i>
+              Art and kindness are our tools of trade
+            </div>
+            <h1>Soul Kind is a creative force</h1>
+            <p className="hero-text">
+              Developing relatable characters and epic stories for a global audience across various formats powered by decentralization.
+            </p>
+            <a href="#" className="cta-button">Learn About Us</a>
           </div>
-          <h4 className="fw-semibold mb-0 text-body-emphasis">
-            Featured title
-          </h4>
-          <p className="text-body-secondary">
-            Paragraph of text beneath the heading to explain the heading.
-          </p>
         </div>
-        <div className="col d-flex flex-column gap-2">
-          <div className="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-            <svg className="bi" width="1em" height="1em">
-              <use xlinkHref="#gear-fill" />
-            </svg>
+        <div className="hero-bg"></div>
+      </section>
+
+      {/* Universe Section */}
+      <section className="universe-section" id="universe">
+        <div className="container">
+          <h2 className="section-title">Designing a universe</h2>
+          <div className="row universe-content">
+            <div className="col-lg-6 col-md-12 universe-text">
+              <h3>Building the Soul Kind brand</h3>
+              <p>
+                We're building the Soul Kind brand, its world, stories, and characters. Our goal is to capture the hearts and minds of kids and adults worldwide with epic creations, a unique vision, and community-driven storytelling.
+              </p>
+              <a href="#" className="cta-button">Discover the Art</a>
+            </div>
+            <div className="col-lg-6 col-md-12 universe-image">
+              <div className="image-placeholder">
+                <i className="fas fa-globe-americas"></i>
+                <div>Soul Kind Universe</div>
+              </div>
+            </div>
           </div>
-          <h4 className="fw-semibold mb-0 text-body-emphasis">
-            Featured title
-          </h4>
-          <p className="text-body-secondary">
-            Paragraph of text beneath the heading to explain the heading.
-          </p>
         </div>
-        <div className="col d-flex flex-column gap-2">
-          <div className="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-            <svg className="bi" width="1em" height="1em">
-              <use xlinkHref="#speedometer" />
-            </svg>
+      </section>
+
+      {/* Stayhuman Section */}
+      <section className="stayhuman-section" id="stayhuman">
+        <div className="container">
+          <h2 className="section-title">Staysoul</h2>
+          <div className="row stayhuman-grid">
+            <div className="col-md-4 col-sm-12">
+              <div className="card soulkind-card">
+                <div className="card-icon">
+                  <i className="fas fa-film"></i>
+                </div>
+                <h4>Soul Kind Studios</h4>
+                <p>A creative studio designing the stories, world, and brand of Soul Kind. We bring epic narratives to life through animation, games, and immersive experiences.</p>
+              </div>
+            </div>
+            <div className="col-md-4 col-sm-12">
+              <div className="card soulkind-card">
+                <div className="card-icon">
+                  <i className="fas fa-hand-holding-heart"></i>
+                </div>
+                <h4>Soul Kind Fund</h4>
+                <p>A fund that helps artists conceive their creations free of economic dependencies. We support visionary creators to bring their ideas to life without financial constraints.</p>
+              </div>
+            </div>
+            <div className="col-md-4 col-sm-12">
+              <div className="card soulkind-card">
+                <div className="card-icon">
+                  <i className="fas fa-users"></i>
+                </div>
+                <h4>Building Together</h4>
+                <p>Our community-driven approach ensures that every story we tell is shaped by the collective imagination of creators and fans from around the world.</p>
+              </div>
+            </div>
           </div>
-          <h4 className="fw-semibold mb-0 text-body-emphasis">
-            Featured title
-          </h4>
-          <p className="text-body-secondary">
-            Paragraph of text beneath the heading to explain the heading.
-          </p>
         </div>
-        <div className="col d-flex flex-column gap-2">
-          <div className="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-            <svg className="bi" width="1em" height="1em">
-              <use xlinkHref="#table" />
-            </svg>
+      </section>
+
+      {/* Mission Section */}
+      <section className="mission-section" id="mission">
+        <div className="container">
+          <h2 className="section-title">Our Mission</h2>
+          <p className="mission-text">
+            Our mission is to <span className="highlight">entertain and inspire people</span> all over the globe through the power of <span className="highlight">art, kindness, and unique storytelling</span> in <span className="highlight">web3</span>.
+          </p>
+          <div className="web3-badge">Powered by Web3 & Decentralization</div>
+        </div>
+      </section>
+
+      {/* Careers CTA */}
+      <section className="careers-cta" id="careers">
+        <div className="container">
+          <h3>Join Our Creative Journey</h3>
+          <p className="careers-text">
+            We're looking for passionate storytellers, artists, and innovators to help shape the future of entertainment.
+          </p>
+          <a href="#" className="cta-button">Explore Careers</a>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section className="blog-section">
+        <div className="container">
+          <h2 className="section-title">Latest Stories</h2>
+          <Blog />
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="faq-section">
+        <div className="container">
+          <h2 className="section-title">Frequently Asked Questions</h2>
+          <div className="row">
+            <div className="col-md-6 col-sm-12">
+              <Faqs />
+            </div>
+            <div className="col-md-6 col-sm-12">
+              <Faqs />
+            </div>
           </div>
-          <h4 className="fw-semibold mb-0 text-body-emphasis">
-            Featured title
-          </h4>
-          <p className="text-body-secondary">
-            Paragraph of text beneath the heading to explain the heading.
-          </p>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+      </section>
 
-<br />
-
-<Blog />
-
-
-<div className="row px-5">
-<br />
-<center>
-  <br />
-  <h4>FAQS</h4>
-  <br />
-</center>
-  <div className="col-md-6 col-sm-12">
-  <Faqs />
-  </div>
-
-  <div className="col-md-6 col-sm-12">
-  <Faqs />
-  </div>
- 
-</div>
-<br /> <br />
-<Footer />
-
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default landing
+export default SoulKind;
