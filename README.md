@@ -1,6 +1,8 @@
 # Soul Kind React Template
 
 
+![Soul Kind Banner](https://github.com/Mohan-I/Soul-Kind-React-Template/blob/main/src/assets/img/gitbanner.png?raw=true)
+
 A modern, creative React template for creative studios and storytelling platforms. This template combines artistic design with web3 technology, featuring a dark theme aesthetic, smooth animations, and community-focused components.
 
 ## ✨ Features
@@ -329,10 +331,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## 📞 Support
 
-For support, email support@soulkind.com or join our Discord community.
+For support, email on mohan-i.vercel.app or join our Discord community.
 
 ---
 
-**Built with ❤️ by the Soul Kind Creative Studio**
+**Built with ❤️ by the Soul Kind Creative Studio (Mohan Yadav)**
 
 ---
