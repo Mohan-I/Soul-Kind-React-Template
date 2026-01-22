@@ -1,10 +1,8 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import Faqs from '../components/frequent/faqs';
 import Footer from '../components/common/footer';
 import Blog from '../components/frequent/blog';
-import hero from '../assets/img/banner.png';
+import hero from '../assets/img/bn.png';
+import krishna from '../assets/img/about.png'
 import useSoulKindAnimations from '../components/common/SoulKindAnimation';
 
 // Import Bootstrap CSS and custom styles
@@ -31,27 +29,77 @@ const SoulKind = () => {
             <a href="#" className="cta-button">Learn About Us</a>
           </div>
         </div>
-        <div className="hero-bg"></div>
+        <div className="hero-bg hero-image-container">
+          <img src={hero} className='hero-img-fluid' alt='hero' />
+        </div>
       </section>
 
       {/* Universe Section */}
       <section className="universe-section" id="universe">
         <div className="container">
           <h2 className="section-title">Designing a universe</h2>
-          <div className="row universe-content">
-            <div className="col-lg-6 col-md-12 universe-text">
+          <div className="row universe-content align-items-center">
+
+            {/* Text Column */}
+            <div className="col-lg-5 col-md-12 universe-text">
               <h3>Building the Soul Kind brand</h3>
               <p>
                 We're building the Soul Kind brand, its world, stories, and characters. Our goal is to capture the hearts and minds of kids and adults worldwide with epic creations, a unique vision, and community-driven storytelling.
               </p>
-              <a href="#" className="cta-button">Discover the Art</a>
-            </div>
-            <div className="col-lg-6 col-md-12 universe-image">
-              <div className="image-placeholder">
-                <i className="fas fa-globe-americas"></i>
-                <div>Soul Kind Universe</div>
+              <a href="#" className="cta-button">
+                Discover the Art <i className="fas fa-arrow-right"></i>
+              </a>
+
+              {/* Stats or features */}
+              <div className="universe-stats mt-5">
+                <div className="row">
+                  <div className="col-4">
+                    <div className="stat-item text-center">
+                      <div className="stat-number" style={{ color: 'var(--accent)', fontSize: '2rem', fontWeight: 'bold' }}>10K+</div>
+                      <div className="stat-label" style={{ color: '#b0b0c0', fontSize: '0.9rem' }}>Community Members</div>
+                    </div>
+                  </div>
+                  <div className="col-4">
+                    <div className="stat-item text-center">
+                      <div className="stat-number" style={{ color: 'var(--primary)', fontSize: '2rem', fontWeight: 'bold' }}>50+</div>
+                      <div className="stat-label" style={{ color: '#b0b0c0', fontSize: '0.9rem' }}>Artists Funded</div>
+                    </div>
+                  </div>
+                  <div className="col-4">
+                    <div className="stat-item text-center">
+                      <div className="stat-number" style={{ color: 'var(--secondary)', fontSize: '2rem', fontWeight: 'bold' }}>100+</div>
+                      <div className="stat-label" style={{ color: '#b0b0c0', fontSize: '0.9rem' }}>Stories Created</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* Image Column */}
+            <div className="col-lg-7 col-md-12">
+              <div className="universe-card-wrapper">
+                {/* Floating Particles */}
+                <div className="floating-particles">
+                  <div className="particle"></div>
+                  <div className="particle"></div>
+                  <div className="particle"></div>
+                </div>
+
+                {/* The Background Card */}
+                <div className="universe-background-card">
+                  <div className="card-text-overlay">Everything</div>
+                  <div className="card-text-subtle">is going to be fine</div>
+                </div>
+
+                {/* The Transparent Character Image */}
+                <img
+                  src={krishna} // Make sure to import this image
+                  className="floating-krishna-img"
+                  alt="Soul Kind Character"
+                />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

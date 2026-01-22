@@ -1,50 +1,226 @@
-.App {
-  animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+/* Custom Scrollbar for Soul Kind Theme */
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
 
-@keyframes fadeInAnimation {
-  0% {
-      opacity: 0;
-  }
+::-webkit-scrollbar-track {
+  background: rgba(15, 15, 26, 0.5);
+  border-radius: 10px;
+}
 
-  100% {
-      opacity: 1;
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  border-radius: 10px;
+  border: 2px solid rgba(15, 15, 26, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--accent), var(--primary));
+  box-shadow: 0 0 10px rgba(0, 212, 170, 0.5);
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(15, 15, 26, 0.5);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) rgba(15, 15, 26, 0.5);
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for specific containers */
+.scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) rgba(15, 15, 26, 0.5);
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  border-radius: 4px;
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+  z-index: 9999;
+  transition: width 0.1s;
+}
+
+/* Hide scrollbar on mobile */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    width: 4px;
   }
 }
 
-.App-logo {
-  height: 40vmin;
+
+/* Ensure links and buttons still show pointer */
+a, button, [role="button"], .clickable {
+  cursor: none !important;
+}
+
+/* Main cursor dot */
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
   pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s, transform 0.1s;
+  box-shadow: 0 0 15px var(--accent);
+  mix-blend-mode: difference;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Cursor ring */
+.cursor-ring {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-out;
+  mix-blend-mode: difference;
+  animation: pulse 2s infinite;
+}
+
+/* Highlight effect for interactive elements */
+.cursor-highlight {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(74, 58, 255, 0.1), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9995;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: all 0.3s;
+}
+
+/* Hover effects for interactive elements */
+a:hover ~ .cursor-ring,
+button:hover ~ .cursor-ring,
+[role="button"]:hover ~ .cursor-ring,
+.clickable:hover ~ .cursor-ring {
+  width: 60px;
+  height: 60px;
+  border-width: 3px;
+  border-color: var(--accent);
+  background: rgba(0, 212, 170, 0.1);
+}
+
+a:hover ~ .cursor-dot,
+button:hover ~ .cursor-dot,
+[role="button"]:hover ~ .cursor-dot,
+.clickable:hover ~ .cursor-dot {
+  transform: translate(-50%, -50%) scale(1.5);
+  background: var(--secondary);
+}
+
+a:hover ~ .cursor-highlight,
+button:hover ~ .cursor-highlight,
+[role="button"]:hover ~ .cursor-highlight,
+.clickable:hover ~ .cursor-highlight {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Animation for cursor ring */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 58, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(74, 58, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 58, 255, 0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Click animation */
+.clicking .cursor-dot {
+  transform: translate(-50%, -50%) scale(0.8);
+  background: var(--secondary);
 }
 
-.App-link {
-  color: #61dafb;
+.clicking .cursor-ring {
+  transform: translate(-50%, -50%) scale(0.9);
+  border-color: var(--secondary);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Disable on mobile */
+@media (max-width: 768px) {
+  * {
+    cursor: auto !important;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .cursor-dot,
+  .cursor-ring,
+  .cursor-trail,
+  .cursor-highlight {
+    display: none !important;
+  }
+}
+
+/* Smooth transitions for interactive states */
+.cta-button:hover ~ .cursor-ring {
+  animation: none;
+  background: rgba(255, 107, 139, 0.2);
+  border-color: var(--secondary);
+}
+
+.soulkind-card:hover ~ .cursor-ring {
+  border-color: var(--accent);
+  background: rgba(0, 212, 170, 0.1);
+}
+
+/* Special effects for specific elements */
+.nav-btn:hover ~ .cursor-ring {
+  width: 70px;
+  height: 70px;
+  border-width: 4px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
