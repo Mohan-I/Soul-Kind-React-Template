@@ -42,7 +42,7 @@ const Footer = () => {
               <h5 className="footer-heading">Explore</h5>
               <ul className="footer-links">
                 <li><a href="#universe">Our Universe</a></li>
-                <li><a href="#stayhuman">Staysoul</a></li>
+                <li><a href="#stayhuman">StayHuman</a></li>
                 <li><a href="#mission">Our Mission</a></li>
                 <li><a href="#careers">Careers</a></li>
                 <li><a href="#faq">FAQ</a></li>

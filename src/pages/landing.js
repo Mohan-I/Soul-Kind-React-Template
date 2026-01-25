@@ -2,6 +2,9 @@ import Faqs from '../components/frequent/faqs';
 import Footer from '../components/common/footer';
 import Blog from '../components/frequent/blog';
 import hero from '../assets/img/bn.png';
+import bird from '../assets/img/bird.svg'
+import box from '../assets/img/box.svg'
+import puzzle from '../assets/img/puzzle.svg'
 import krishna from '../assets/img/about.png'
 import useSoulKindAnimations from '../components/common/SoulKindAnimation';
 
@@ -112,7 +115,7 @@ const SoulKind = () => {
             <div className="col-md-4 col-sm-12">
               <div className="card soulkind-card">
                 <div className="card-icon">
-                  <i className="fas fa-film"></i>
+                  <img src={bird} className='icon' alt='icon' />
                 </div>
                 <h4>Soul Kind Studios</h4>
                 <p>A creative studio designing the stories, world, and brand of Soul Kind. We bring epic narratives to life through animation, games, and immersive experiences.</p>
@@ -121,7 +124,7 @@ const SoulKind = () => {
             <div className="col-md-4 col-sm-12">
               <div className="card soulkind-card">
                 <div className="card-icon">
-                  <i className="fas fa-hand-holding-heart"></i>
+                  <img src={box} className='icon' alt='icon' />
                 </div>
                 <h4>Soul Kind Fund</h4>
                 <p>A fund that helps artists conceive their creations free of economic dependencies. We support visionary creators to bring their ideas to life without financial constraints.</p>
@@ -130,7 +133,7 @@ const SoulKind = () => {
             <div className="col-md-4 col-sm-12">
               <div className="card soulkind-card">
                 <div className="card-icon">
-                  <i className="fas fa-users"></i>
+                  <img src={puzzle} className='icon' alt='icon' />
                 </div>
                 <h4>Building Together</h4>
                 <p>Our community-driven approach ensures that every story we tell is shaped by the collective imagination of creators and fans from around the world.</p>
