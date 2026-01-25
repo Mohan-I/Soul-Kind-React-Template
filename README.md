@@ -1,6 +1,8 @@
 # Soul Kind React Template
 
 
+![Soul Kind Banner](https://github.com/Mohan-I/Soul-Kind-React-Template/blob/main/src/assets/img/gitbanner.png?raw=true)
+
 A modern, creative React template for creative studios and storytelling platforms. This template combines artistic design with web3 technology, featuring a dark theme aesthetic, smooth animations, and community-focused components.
 
 ## ✨ Features
@@ -39,18 +41,18 @@ soul-kind-react/
 │   │       └── banner.png
 │   ├── components/
 │   │   ├── common/
-│   │   │   ├── CursorChaser.jsx
-│   │   │   └── footer.jsx
+│   │   │   ├── CursorChaser.js
+│   │   │   └── footer.js
 │   │   └── frequent/
-│   │       ├── faqs.jsx
-│   │       └── blog.jsx
+│   │       ├── faqs.js
+│   │       └── blog.js
 │   ├── styles/
 │   │   ├── SoulKind.css
 │   │   └── scrollbar.css
 │   ├── utils/
 │   │   └── SoulKindAnimations.js
 │   ├── App.js
-│   ├── SoulKind.jsx
+│   ├── SoulKind.js
 │   └── index.js
 ├── package.json
 └── README.md
@@ -96,12 +98,12 @@ soul-kind-react/
 
 ### Basic Setup
 1. Replace placeholder images in `/src/assets/img/`
-2. Update content in `SoulKind.jsx` with your brand information
+2. Update content in `SoulKind.js` with your brand information
 3. Customize colors in `:root` variables in `SoulKind.css`
 4. Add your own FAQ questions and blog posts
 
 ### Adding Custom Content
-```jsx
+```js
 // Update hero section
 <h1>Your Studio Name is a creative force</h1>
 <p className="hero-text">
@@ -125,7 +127,7 @@ Edit the CSS variables in `SoulKind.css`:
 
 ### Cursor Chaser Component
 Add the cursor chaser to your main component:
-```jsx
+```js
 import CursorChaser from './components/common/CursorChaser';
 
 function SoulKind() {
@@ -178,8 +180,8 @@ The template includes web3-ready components:
 ## 📝 Content Management
 
 ### FAQ Content
-Edit the FAQ array in `faqs.jsx`:
-```jsx
+Edit the FAQ array in `faqs.js`:
+```js
 const faqItems = [
   {
     question: "Your question here",
@@ -189,8 +191,8 @@ const faqItems = [
 ```
 
 ### Blog Posts
-Update the blog data in `blog.jsx`:
-```jsx
+Update the blog data in `blog.js`:
+```js
 const featuredPosts = [
   {
     title: "Post Title",
@@ -329,10 +331,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## 📞 Support
 
-For support, email support@soulkind.com or join our Discord community.
+For support, email on mohan-i.vercel.app or join our Discord community.
 
 ---
 
-**Built with ❤️ by the Soul Kind Creative Studio**
+**Built with ❤️ by the Soul Kind Creative Studio (Mohan Yadav)**
 
 ---
