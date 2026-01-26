@@ -1,11 +1,12 @@
 import Faqs from '../components/frequent/faqs';
-import Footer from '../components/common/footer';
 import Blog from '../components/frequent/blog';
 import hero from '../assets/img/bn.png';
 import bird from '../assets/img/bird.svg'
 import box from '../assets/img/box.svg'
 import puzzle from '../assets/img/puzzle.svg'
 import krishna from '../assets/img/about.png'
+import timelineImage from '../assets/img/timeline-visual.png';
+import banner from '../assets/img/banner (1).webp'
 import useSoulKindAnimations from '../components/common/SoulKindAnimation';
 
 // Import Bootstrap CSS and custom styles
@@ -150,6 +151,7 @@ const SoulKind = () => {
           <p className="mission-text">
             Our mission is to <span className="highlight">entertain and inspire people</span> all over the globe through the power of <span className="highlight">art, kindness, and unique storytelling</span> in <span className="highlight">web3</span>.
           </p>
+          <img src={timelineImage} className='img-basic' alt='hero' />
           <div className="web3-badge">Powered by Web3 & Decentralization</div>
         </div>
       </section>
@@ -161,6 +163,7 @@ const SoulKind = () => {
           <p className="careers-text">
             We're looking for passionate storytellers, artists, and innovators to help shape the future of entertainment.
           </p>
+          <img src={banner} className='img-basic' alt='hero' />
           <a href="#" className="cta-button">Explore Careers</a>
         </div>
       </section>
@@ -188,7 +191,6 @@ const SoulKind = () => {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 };

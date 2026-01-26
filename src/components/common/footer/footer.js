@@ -1,4 +1,10 @@
 import React from 'react';
+import email from '../../../assets/img/icons/email.svg'
+import linkedin from '../../../assets/img/icons/linkedin.svg'
+import facebook from'../../../assets/img/icons/facebook.svg'
+import discord from '../../../assets/img/icons/discord.svg'
+import github from '../../../assets/img/icons/github.svg'
+import plane from '../../../assets/img/icons/plane.svg'
 
 const Footer = () => {
   return (
@@ -11,7 +17,6 @@ const Footer = () => {
             <div className="col-lg-4 col-md-6 mb-5">
               <div className="footer-brand">
                 <div className="footer-logo">
-                  <i className="fas fa-palette"></i>
                   Soul Kind
                 </div>
                 <p className="footer-tagline">
@@ -19,19 +24,19 @@ const Footer = () => {
                 </p>
                 <div className="footer-social">
                   <a href="#" className="social-icon">
-                    <i className="fab fa-twitter"></i>
+                  <img src={email} alt='icon' />
                   </a>
                   <a href="#" className="social-icon">
-                    <i className="fab fa-discord"></i>
+                  <img src={facebook} alt='icon' />
                   </a>
                   <a href="#" className="social-icon">
-                    <i className="fab fa-instagram"></i>
+                   <img src={github} alt='icon' /> 
                   </a>
                   <a href="#" className="social-icon">
-                    <i className="fab fa-youtube"></i>
+                  <img src={discord} alt='icon' />
                   </a>
                   <a href="#" className="social-icon">
-                    <i className="fab fa-linkedin"></i>
+                  <img src={linkedin} alt='icon' />
                   </a>
                 </div>
               </div>
@@ -86,7 +91,7 @@ const Footer = () => {
                     aria-label="Email address"
                   />
                   <button className="btn-newsletter" type="submit">
-                    <i className="fas fa-paper-plane"></i>
+                    <img src={plane} className='icon' alt="send" />
                   </button>
                 </div>
                 <div className="form-text">

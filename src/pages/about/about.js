@@ -1,18 +1,15 @@
 import React from 'react';
-import Faqs from '../components/frequent/faqs';
-import Footer from '../components/common/footer';
-import Blog from '../components/frequent/blog';
-import aboutVideo from '../assets/img/about-hero.mp4'; // Video file
-import partner1 from '../assets/img/partner1.jpeg';
-import partner2 from '../assets/img/partner2.jpeg';
-import partner3 from '../assets/img/partner3.jpeg';
-import partner4 from '../assets/img/partner4.jpeg';
-import timelineImage from '../assets/img/timeline-visual.png';
-import useSoulKindAnimations from '../components/common/SoulKindAnimation';
+import aboutVideo from '../../assets/img/about-hero.mp4'; // Video file
+import partner1 from '../../assets/img/partner1.jpeg';
+import partner2 from '../../assets/img/partner2.jpeg';
+import partner3 from '../../assets/img/partner3.jpeg';
+import partner4 from '../../assets/img/partner4.jpeg';
+import timelineImage from '../../assets/img/timeline-visual.png';
 
 // Import Bootstrap CSS and custom styles
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './SoulKind.css'; // We'll create this CSS file
+import './about.css'; // We'll create this CSS file
+import useSoulKindAnimations from '../../components/common/SoulKindAnimation';
 
 const AboutUs = () => {
   useSoulKindAnimations();
@@ -309,7 +306,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 };

@@ -19,6 +19,7 @@ body {
   color: var(--light);
   overflow-x: hidden;
   font-family: 'IndiFlow', sans-serif;
+  cursor: url('../assets/img/cursor.svg'), auto;
 }
 
 /* Header & Navigation */

@@ -80,6 +80,11 @@ html {
   }
 }
 
+.img-basic {
+  width: 60%;
+  display: block;
+  margin: 0 auto; 
+}
 
 /* Ensure links and buttons still show pointer */
 a, button, [role="button"], .clickable {
