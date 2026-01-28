@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Footer from '../../components/common/footer/footer';
 import useSoulKindAnimations from '../../components/common/SoulKindAnimation';
 import './Careers.css';
 
@@ -109,7 +108,7 @@ const Careers = () => {
           
           <div className="positions-grid">
             {positions.map(position => (
-              <div key={position.id} className="position-card">
+              <div key={position.id} className="position-card" data-aos="fade-up">
                 <div className="position-header">
                   <span className="position-department">{position.department}</span>
                   <h3 className="position-title">{position.title}</h3>
@@ -149,28 +148,28 @@ const Careers = () => {
               <div className="benefits-list">
                 <div className="benefit-item">
                   <i className="fas fa-heart"></i>
-                  <div>
+                  <div data-aos="fade-right">
                     <h4>Purpose-Driven Work</h4>
                     <p>Create stories that matter and impact millions worldwide.</p>
                   </div>
                 </div>
                 <div className="benefit-item">
                   <i className="fas fa-users"></i>
-                  <div>
+                  <div data-aos="fade-right">
                     <h4>Global Community</h4>
                     <p>Collaborate with talented creators from around the world.</p>
                   </div>
                 </div>
                 <div className="benefit-item">
                   <i className="fas fa-graduation-cap"></i>
-                  <div>
+                  <div data-aos="fade-right">
                     <h4>Continuous Growth</h4>
                     <p>Regular workshops, training, and mentorship programs.</p>
                   </div>
                 </div>
                 <div className="benefit-item">
                   <i className="fas fa-balance-scale"></i>
-                  <div>
+                  <div data-aos="fade-right">
                     <h4>Work-Life Harmony</h4>
                     <p>Flexible schedules and unlimited creative time off.</p>
                   </div>
@@ -183,7 +182,7 @@ const Careers = () => {
               </div>
             </div>
 
-            <div className="application-form-container">
+            <div className="application-form-container" data-aos="fade-down">
               <div className="form-header">
                 <h3>Application Form</h3>
                 {formData.position && (
@@ -397,7 +396,6 @@ const Careers = () => {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 };

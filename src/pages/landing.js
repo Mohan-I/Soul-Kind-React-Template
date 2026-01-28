@@ -22,36 +22,36 @@ const SoulKind = () => {
       <section className="soulkind-hero">
         <div className="container">
           <div className="hero-content">
-            <div className="tagline">
+            <div className="tagline" data-aos="fade-right">
               <i className="fas fa-heart"></i>
               Art and kindness are our tools of trade
             </div>
-            <h1>Soul Kind is a creative force</h1>
-            <p className="hero-text">
+            <h1 data-aos="fade-right">Soul Kind is a creative force</h1>
+            <p className="hero-text" data-aos="fade-right">
               Developing relatable characters and epic stories for a global audience across various formats powered by decentralization.
             </p>
-            <a href="#" className="cta-button">Learn About Us</a>
+            <a href="#" className="cta-button" data-aos="fade-up">Learn About Us</a>
           </div>
         </div>
         <div className="hero-bg hero-image-container">
-          <img src={hero} className='hero-img-fluid' alt='hero' />
+          <img src={hero} className='hero-img-fluid' data-aos="fade-up" alt='hero' />
         </div>
       </section>
 
       {/* Universe Section */}
       <section className="universe-section" id="universe">
         <div className="container">
-          <h2 className="section-title">Designing a universe</h2>
+          <h2 className="section-title" data-aos="fade-up">Designing a universe</h2>
           <div className="row universe-content align-items-center">
 
             {/* Text Column */}
             <div className="col-lg-5 col-md-12 universe-text">
-              <h3>Building the Soul Kind brand</h3>
-              <p>
+              <h3 data-aos="fade-right">Building the Soul Kind brand</h3>
+              <p data-aos="fade-right">
                 We're building the Soul Kind brand, its world, stories, and characters. Our goal is to capture the hearts and minds of kids and adults worldwide with epic creations, a unique vision, and community-driven storytelling.
               </p>
               <a href="#" className="cta-button">
-                Discover the Art <i className="fas fa-arrow-right"></i>
+                Discover the Art <i className="fas fa-arrow-right" data-aos="fade-right"></i>
               </a>
 
               {/* Stats or features */}
@@ -80,7 +80,7 @@ const SoulKind = () => {
             </div>
 
             {/* Image Column */}
-            <div className="col-lg-7 col-md-12">
+            <div className="col-lg-7 col-md-12" data-aos="fade-up">
               <div className="universe-card-wrapper">
                 {/* Floating Particles */}
                 <div className="floating-particles">
@@ -91,8 +91,8 @@ const SoulKind = () => {
 
                 {/* The Background Card */}
                 <div className="universe-background-card">
-                  <div className="card-text-overlay">Everything</div>
-                  <div className="card-text-subtle">is going to be fine</div>
+                  <div className="card-text-overlay" data-aos="fade-right">Everything</div>
+                  <div className="card-text-subtle" data-aos="fade-right">is going to be fine</div>
                 </div>
 
                 {/* The Transparent Character Image */}
@@ -147,24 +147,128 @@ const SoulKind = () => {
       {/* Mission Section */}
       <section className="mission-section" id="mission">
         <div className="container">
-          <h2 className="section-title">Our Mission</h2>
-          <p className="mission-text">
-            Our mission is to <span className="highlight">entertain and inspire people</span> all over the globe through the power of <span className="highlight">art, kindness, and unique storytelling</span> in <span className="highlight">web3</span>.
-          </p>
-          <img src={timelineImage} className='img-basic' alt='hero' />
-          <div className="web3-badge">Powered by Web3 & Decentralization</div>
+          <div className="mission-content" data-aos="fade-up" data-aos-duration="800">
+            <h2 className="section-title">Our Mission</h2>
+            <p className="mission-text">
+              Our mission is to <span className="highlight">entertain and inspire people</span> all over the globe through the power of <span className="highlight">art, kindness, and unique storytelling</span> in <span className="highlight">web3</span>.
+            </p>
+
+            <div className="mission-visual" data-aos="zoom-in" data-aos-delay="300">
+              <div className="image-frame">
+                <img
+                  src={timelineImage}
+                  className='mission-img'
+                  alt='Creative Journey Timeline'
+                  data-aos="fade-in"
+                  data-aos-delay="500"
+                />
+                <div className="frame-decoration"></div>
+                <div className="frame-decoration corner-2"></div>
+                <div className="frame-decoration corner-3"></div>
+                <div className="frame-decoration corner-4"></div>
+              </div>
+
+              <div className="floating-elements">
+                <div className="floating-icon" data-aos="fade-down-right" data-aos-delay="700">
+                  <i className="fas fa-paint-brush"></i>
+                </div>
+                <div className="floating-icon" data-aos="fade-down-left" data-aos-delay="800">
+                  <i className="fas fa-heart"></i>
+                </div>
+                <div className="floating-icon" data-aos="fade-up-right" data-aos-delay="900">
+                  <i className="fas fa-code"></i>
+                </div>
+              </div>
+            </div>
+
+            <div className="web3-badge" data-aos="fade-up" data-aos-delay="1000">
+              <i className="fas fa-link"></i>
+              <span>Powered by Web3 & Decentralization</span>
+            </div>
+
+            <div className="mission-stats" data-aos="fade-up" data-aos-delay="1200">
+              <div className="stat-item">
+                <div className="stat-number" data-count="50">0</div>
+                <div className="stat-label">Stories Created</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number" data-count="25">0</div>
+                <div className="stat-label">Countries Reached</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number" data-count="10000">0</div>
+                <div className="stat-label">Community Members</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Careers CTA */}
       <section className="careers-cta" id="careers">
         <div className="container">
-          <h3>Join Our Creative Journey</h3>
-          <p className="careers-text">
-            We're looking for passionate storytellers, artists, and innovators to help shape the future of entertainment.
-          </p>
-          <img src={banner} className='img-basic' alt='hero' />
-          <a href="#" className="cta-button">Explore Careers</a>
+          <div className="careers-content" data-aos="fade-up" data-aos-duration="800">
+            <div className="careers-header">
+              <h3 className="careers-title">Join Our Creative Journey</h3>
+              <p className="careers-text">
+                We're looking for passionate storytellers, artists, and innovators to help shape the future of entertainment.
+              </p>
+            </div>
+
+            <div className="careers-visual" data-aos="zoom-in" data-aos-delay="400">
+              <div className="visual-wrapper">
+                <img
+                  src={banner}
+                  className='careers-img'
+                  alt='Join Our Creative Team'
+                  data-aos="fade-in"
+                  data-aos-delay="600"
+                />
+                <div className="visual-overlay">
+                  <div className="overlay-text">
+                    <span className="overlay-title">Your Story Starts Here</span>
+                    <span className="overlay-subtitle">Create. Innovate. Inspire.</span>
+                  </div>
+                </div>
+
+                <div className="floating-shapes">
+                  <div className="shape shape-1" data-aos="fade-left" data-aos-delay="800"></div>
+                  <div className="shape shape-2" data-aos="fade-right" data-aos-delay="900"></div>
+                  <div className="shape shape-3" data-aos="fade-up" data-aos-delay="1000"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="careers-action" data-aos="fade-up" data-aos-delay="1200">
+              <a href="/careers" className="cta-button">
+                <span>Explore Careers</span>
+                <i className="fas fa-arrow-right"></i>
+              </a>
+              <a href="/apply" className="cta-button secondary">
+                <span>Quick Apply</span>
+                <i className="fas fa-rocket"></i>
+              </a>
+            </div>
+
+            <div className="careers-perks" data-aos="fade-up" data-aos-delay="1400">
+              <div className="perk-item">
+                <i className="fas fa-globe"></i>
+                <span>Remote First</span>
+              </div>
+              <div className="perk-item">
+                <i className="fas fa-graduation-cap"></i>
+                <span>Learning Budget</span>
+              </div>
+              <div className="perk-item">
+                <i className="fas fa-calendar-alt"></i>
+                <span>Flexible Hours</span>
+              </div>
+              <div className="perk-item">
+                <i className="fas fa-heart"></i>
+                <span>Health & Wellness</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

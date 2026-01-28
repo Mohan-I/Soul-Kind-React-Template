@@ -31,8 +31,8 @@ function Faqs() {
   return (
     <Accordion className="soulkind-accordion">
       {faqItems.map((item, index) => (
-        <Accordion.Item key={index} eventKey={index.toString()} className="soulkind-accordion-item">
-          <Accordion.Header className="soulkind-accordion-header">
+        <Accordion.Item key={index} eventKey={index.toString()} className="soulkind-accordion-item" data-aos="fade-up">
+          <Accordion.Header className="soulkind-accordion-header" data-aos="fade-right">
             {item.question}
           </Accordion.Header>
           <Accordion.Body className="soulkind-accordion-body">

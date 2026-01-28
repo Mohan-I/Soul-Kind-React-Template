@@ -83,50 +83,149 @@ const AboutUs = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="timeline-section" id="timeline">
-        <div className="container">
-          <h2 className="section-title">Our Journey Through Time</h2>
-          <div className="row timeline-visual align-items-center">
-            <div className="col-lg-6 col-md-12">
-              <div className="timeline-image-wrapper">
-                <img src={timelineImage} alt="Our Journey Timeline" className="timeline-visual-img" />
+<section className="timeline-section" id="timeline">
+  <div className="container">
+    <div className="timeline-header" data-aos="fade-up" data-aos-duration="800">
+      <h2 className="section-title">Our Journey Through Time</h2>
+      <p className="section-subtitle">From humble beginnings to global impact, follow our creative evolution</p>
+    </div>
+    
+    <div className="row timeline-visual align-items-center">
+      {/* Image Column */}
+      <div className="col-lg-6 col-md-12" data-aos="fade-right" data-aos-duration="1000">
+        <div className="timeline-image-wrapper">
+          <div className="image-container">
+            <div className="milestone-marker">
+                <div className="marker-dot"></div>
+                <div className="marker-pulse"></div>
+              </div>
+            <img 
+              src={timelineImage} 
+              alt="Our Journey Timeline" 
+              className="timeline-visual-img" 
+              data-aos="zoom-in" 
+              data-aos-delay="300"
+            />
+            <div className="image-overlay">
+              <div className="overlay-content">
+                <i className="fas fa-history"></i>
+                <span>4 Years of Innovation</span>
               </div>
             </div>
-            <div className="col-lg-6 col-md-12">
-              <div className="milestone-list">
-                <div className="milestone">
+          </div>
+          <div className="timeline-stats">
+            <div className="stat" data-aos="fade-up" data-aos-delay="500">
+              <div className="stat-number">4+</div>
+              <div className="stat-label">Years</div>
+            </div>
+            <div className="stat" data-aos="fade-up" data-aos-delay="600">
+              <div className="stat-number">500K+</div>
+              <div className="stat-label">Members</div>
+            </div>
+            <div className="stat" data-aos="fade-up" data-aos-delay="700">
+              <div className="stat-number">50+</div>
+              <div className="stat-label">Countries</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Milestones Column */}
+      <div className="col-lg-6 col-md-12" data-aos="fade-left" data-aos-duration="1000">
+        <div className="timeline-track">
+          <div className="timeline-line"></div>
+          
+          <div className="milestone-list">
+            <div className="milestone" data-aos="fade-left" data-aos-delay="400">
+              
+              <div className="milestone-content">
+                <div className="milestone-header">
+                  
                   <div className="milestone-year">2019</div>
-                  <h3 className="milestone-title">The Birth of a Vision</h3>
-                  <p className="milestone-description">
-                    Founded by three friends with a shared dream: to create stories that matter, using technology to reach hearts globally.
-                  </p>
+                  <div className="milestone-badge">Foundation</div>
                 </div>
-                <div className="milestone">
+                <h3 className="milestone-title">The Birth of a Vision</h3>
+                <p className="milestone-description">
+                  Founded by three friends with a shared dream: to create stories that matter, using technology to reach hearts globally.
+                </p>
+                <div className="milestone-tags">
+                  <span className="tag">Storytelling</span>
+                  <span className="tag">Technology</span>
+                  <span className="tag">Innovation</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="milestone" data-aos="fade-left" data-aos-delay="500">
+              
+              <div className="milestone-content">
+                <div className="milestone-header">
                   <div className="milestone-year">2020</div>
-                  <h3 className="milestone-title">First Community Spark</h3>
-                  <p className="milestone-description">
-                    Built our first online community of 1,000 passionate creators and launched the Soul Kind Fund.
-                  </p>
+                  <div className="milestone-badge">Community</div>
                 </div>
-                <div className="milestone">
+                <h3 className="milestone-title">First Community Spark</h3>
+                <p className="milestone-description">
+                  Built our first online community of 1,000 passionate creators and launched the Soul Kind Fund.
+                </p>
+                <div className="milestone-tags">
+                  <span className="tag">Community</span>
+                  <span className="tag">Funding</span>
+                  <span className="tag">Growth</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="milestone" data-aos="fade-left" data-aos-delay="600">
+              
+              <div className="milestone-content">
+                <div className="milestone-header">
                   <div className="milestone-year">2021</div>
-                  <h3 className="milestone-title">Web3 Revolution</h3>
-                  <p className="milestone-description">
-                    Pioneered web3 integration in storytelling with our first NFT collection that sold out in 3 minutes.
-                  </p>
+                  <div className="milestone-badge">Web3</div>
                 </div>
-                <div className="milestone">
+                <h3 className="milestone-title">Web3 Revolution</h3>
+                <p className="milestone-description">
+                  Pioneered web3 integration in storytelling with our first NFT collection that sold out in 3 minutes.
+                </p>
+                <div className="milestone-tags">
+                  <span className="tag">Web3</span>
+                  <span className="tag">NFTs</span>
+                  <span className="tag">Blockchain</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="milestone" data-aos="fade-left" data-aos-delay="700">
+              
+              <div className="milestone-content">
+                <div className="milestone-header">
                   <div className="milestone-year">2023</div>
-                  <h3 className="milestone-title">Global Recognition</h3>
-                  <p className="milestone-description">
-                    Featured in Forbes 30 Under 30 and expanded our community to 50+ countries with 500K+ members.
-                  </p>
+                  <div className="milestone-badge">Global</div>
+                </div>
+                <h3 className="milestone-title">Global Recognition</h3>
+                <p className="milestone-description">
+                  Featured in Forbes 30 Under 30 and expanded our community to 50+ countries with 500K+ members.
+                </p>
+                <div className="milestone-tags">
+                  <span className="tag">Recognition</span>
+                  <span className="tag">Global</span>
+                  <span className="tag">Impact</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+    
+    <div className="timeline-cta" data-aos="fade-up" data-aos-delay="800">
+      <p className="cta-text">Join us as we continue to write our story</p>
+      <a href="/about" className="timeline-btn">
+        <span>Explore Our Full Story</span>
+        <i className="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* Testimonials Section */}
       <section className="testimonials-section" id="testimonials">
@@ -203,45 +302,134 @@ const AboutUs = () => {
 
       {/* Partners Section */}
       <section className="partners-section" id="partners">
-        <div className="container">
-          <h2 className="section-title">Trusted By Visionaries</h2>
-          <p className="section-subtitle">We're proud to collaborate with forward-thinking organizations that share our passion for innovation and creativity</p>
-          
-          <div className="partners-grid">
-            <div className="partner-card">
-              <div className="partner-logo">
-                <img src={partner1} alt="Partner 1" />
-              </div>
-              <h4 className="partner-name">ArtTech Collective</h4>
-              <p className="partner-description">Pioneering the intersection of art and technology since 2015</p>
+  <div className="container">
+    <div className="partners-header" data-aos="fade-up" data-aos-duration="800">
+      <h2 className="section-title">Trusted By Visionaries</h2>
+      <p className="section-subtitle">We're proud to collaborate with forward-thinking organizations that share our passion for innovation and creativity</p>
+    </div>
+    
+    <div className="partners-container">
+      {/* Partners Grid */}
+      <div className="partners-grid" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <div className="partner-card" data-aos="zoom-in" data-aos-delay="300">
+          <div className="partner-logo-container">
+            <div className="partner-logo">
+              <img src={partner1} alt="ArtTech Collective" />
             </div>
-
-            <div className="partner-card">
-              <div className="partner-logo">
-                <img src={partner2} alt="Partner 2" />
-              </div>
-              <h4 className="partner-name">Web3 Creators DAO</h4>
-              <p className="partner-description">Decentralized community of digital creators and innovators</p>
-            </div>
-
-            <div className="partner-card">
-              <div className="partner-logo">
-                <img src={partner3} alt="Partner 3" />
-              </div>
-              <h4 className="partner-name">Future Story Lab</h4>
-              <p className="partner-description">Research and development for next-generation storytelling</p>
-            </div>
-
-            <div className="partner-card">
-              <div className="partner-logo">
-                <img src={partner4} alt="Partner 4" />
-              </div>
-              <h4 className="partner-name">Global Arts Foundation</h4>
-              <p className="partner-description">Supporting artistic innovation across continents</p>
+            <div className="logo-glow"></div>
+          </div>
+          <div className="partner-info">
+            <h4 className="partner-name">ArtTech Collective</h4>
+            <p className="partner-description">Pioneering the intersection of art and technology since 2015</p>
+            <div className="partner-tags">
+              <span>Art</span>
+              <span>Tech</span>
+              <span>Innovation</span>
             </div>
           </div>
+          <div className="partner-link">
+            <a href="/" target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-external-link-alt"></i>
+            </a>
+          </div>
         </div>
-      </section>
+
+        <div className="partner-card" data-aos="zoom-in" data-aos-delay="400">
+          <div className="partner-logo-container">
+            <div className="partner-logo">
+              <img src={partner2} alt="Web3 Creators DAO" />
+            </div>
+            <div className="logo-glow"></div>
+          </div>
+          <div className="partner-info">
+            <h4 className="partner-name">Web3 Creators DAO</h4>
+            <p className="partner-description">Decentralized community of digital creators and innovators</p>
+            <div className="partner-tags">
+              <span>Web3</span>
+              <span>DAO</span>
+              <span>Community</span>
+            </div>
+          </div>
+          <div className="partner-link">
+            <a href="/" target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <div className="partner-card" data-aos="zoom-in" data-aos-delay="500">
+          <div className="partner-logo-container">
+            <div className="partner-logo">
+              <img src={partner3} alt="Future Story Lab" />
+            </div>
+            <div className="logo-glow"></div>
+          </div>
+          <div className="partner-info">
+            <h4 className="partner-name">Future Story Lab</h4>
+            <p className="partner-description">Research and development for next-generation storytelling</p>
+            <div className="partner-tags">
+              <span>Research</span>
+              <span>Storytelling</span>
+              <span>Development</span>
+            </div>
+          </div>
+          <div className="partner-link">
+            <a href="/" target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <div className="partner-card" data-aos="zoom-in" data-aos-delay="600">
+          <div className="partner-logo-container">
+            <div className="partner-logo">
+              <img src={partner4} alt="Global Arts Foundation" />
+            </div>
+            <div className="logo-glow"></div>
+          </div>
+          <div className="partner-info">
+            <h4 className="partner-name">Global Arts Foundation</h4>
+            <p className="partner-description">Supporting artistic innovation across continents</p>
+            <div className="partner-tags">
+              <span>Global</span>
+              <span>Arts</span>
+              <span>Foundation</span>
+            </div>
+          </div>
+          <div className="partner-link">
+            <a href="/" target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      {/* Partners Slider Indicators */}
+      <div className="partners-slider" data-aos="fade-up" data-aos-delay="800">
+        <div className="slider-dots">
+          <span className="dot active"></span>
+          <span className="dot"></span>
+          <span className="dot"></span>
+        </div>
+      </div>
+      
+      {/* Partnership CTA */}
+      <div className="partnership-cta" data-aos="fade-up" data-aos-delay="900">
+        <div className="cta-content">
+          <i className="fas fa-handshake"></i>
+          <div className="cta-text">
+            <h3>Interested in Partnership?</h3>
+            <p>Join our network of innovative organizations creating the future together</p>
+          </div>
+          <a href="/partnership" className="partner-btn">
+            <span>Become a Partner</span>
+            <i className="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Values Section */}
       <section className="values-section" id="values">
@@ -288,7 +476,7 @@ const AboutUs = () => {
             <p className="cta-text">
               Whether you're an artist looking for support, a company seeking innovative collaboration, or simply someone who believes in the power of stories—let's build something beautiful together.
             </p>
-            <div className="cta-buttons">
+            <div className="cta-buttons" data-aos="fade-up">
               <a href="/apply" className="cta-button primary-cta">
                 <i className="fas fa-rocket"></i>
                 Join as Artist

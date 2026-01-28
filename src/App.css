@@ -1,6 +1,4 @@
-/* Custom Scrollbar for Soul Kind Theme */
 
-/* For Webkit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -81,9 +79,13 @@ html {
 }
 
 .img-basic {
-  width: 60%;
+  width: 80vw;
   display: block;
   margin: 0 auto; 
+}
+
+.icon{
+  width:100px;
 }
 
 /* Ensure links and buttons still show pointer */
@@ -92,7 +94,7 @@ a, button, [role="button"], .clickable {
 }
 
 /* Main cursor dot */
-.cursor-dot {
+cursor:hover {
   position: fixed;
   width: 8px;
   height: 8px;
