@@ -318,7 +318,7 @@
 .partner-logo img {
   max-width: 100%;
   max-height: 100%;
-  filter: brightness(0) invert(1);
+  filter: brightness(1) invert(0);
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
@@ -985,14 +985,14 @@
 .partner-logo img {
   max-width: 100%;
   max-height: 100%;
-  filter: brightness(0) invert(1);
+  filter: brightness(1) invert(0);
   opacity: 0.9;
   transition: all 0.3s ease;
 }
 
 .partner-card:hover .partner-logo img {
   opacity: 1;
-  filter: brightness(0) invert(0.9) sepia(1) hue-rotate(200deg) saturate(5);
+  filter: hue-rotate(200deg) saturate(5);
 }
 
 .logo-glow {

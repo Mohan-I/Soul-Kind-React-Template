@@ -36,7 +36,7 @@ const Blog = () => {
   return (
     <div className="soulkind-blog">
       {/* Featured Post */}
-      <div className="featured-post">
+      <div className="featured-post" data-aos="zoom-in">
         <div className="featured-content">
           <div className="category-badge">Featured</div>
           <h1 className="featured-title">The Soul Kind Manifesto: Redefining Creativity in the Digital Age</h1>
@@ -50,7 +50,7 @@ const Blog = () => {
       </div>
 
       {/* Recent Posts Grid */}
-      <div className="recent-posts-grid">
+      <div className="recent-posts-grid" data-aos="zoom-fadeup">
         {featuredPosts.map((post, index) => (
           <div key={index} className="blog-card">
             <div className="blog-card-content">

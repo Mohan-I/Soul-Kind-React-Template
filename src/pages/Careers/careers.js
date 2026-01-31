@@ -127,12 +127,14 @@ const Careers = () => {
                     <span>Immediate</span>
                   </div>
                 </div>
+                <a href="#apply" className='norm-link'>
                 <button 
                   className="position-apply"
                   onClick={() => setFormData(prev => ({ ...prev, position: position.id }))}
                 >
                   Apply Now <i className="fas fa-arrow-right"></i>
                 </button>
+                </a>
               </div>
             ))}
           </div>

@@ -137,6 +137,58 @@ const Header = () => {
           aria-label="Close menu"
           tabIndex={0}
         ></div>
+        <ul className={`mobile-overlay ${isOpen ? 'block' : 'hidden'}`}>
+            <li>
+              <Link 
+                to="/" 
+                className={`nav-link ${isActive('/') ? 'active' : ''}`}
+                onClick={() => setIsOpen(false)}
+              >
+                <i className="fas fa-home"></i>
+                <span>Home</span>
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/about" 
+                className={`nav-link ${isActive('/about') ? 'active' : ''}`}
+                onClick={() => setIsOpen(false)}
+              >
+                <i className="fas fa-globe"></i>
+                <span>Universe</span>
+              </Link>
+            </li>
+            <li>
+              <a 
+                href="#stayhuman" 
+                className="nav-link"
+                onClick={() => setIsOpen(false)}
+              >
+                <i className="fas fa-users"></i>
+                <span>Stayhuman</span>
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#mission" 
+                className="nav-link"
+                onClick={() => setIsOpen(false)}
+              >
+                <i className="fas fa-bullseye"></i>
+                <span>Mission</span>
+              </a>
+            </li>
+            <li>
+              <Link 
+                to="/careers" 
+                className={`nav-link nav-btn ${isActive('/careers') ? 'active' : ''}`}
+                onClick={() => setIsOpen(false)}
+              >
+                <i className="fas fa-briefcase"></i>
+                <span>Explore Careers</span>
+              </Link>
+            </li>
+          </ul>
       </div>
     </header>
   );

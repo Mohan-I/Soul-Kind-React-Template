@@ -8,8 +8,6 @@ import krishna from '../assets/img/about.png'
 import timelineImage from '../assets/img/timeline-visual.png';
 import banner from '../assets/img/banner (1).webp'
 import useSoulKindAnimations from '../components/common/SoulKindAnimation';
-
-// Import Bootstrap CSS and custom styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './SoulKind.css'; // We'll create this CSS file
 
@@ -188,15 +186,15 @@ const SoulKind = () => {
 
             <div className="mission-stats" data-aos="fade-up" data-aos-delay="1200">
               <div className="stat-item">
-                <div className="stat-number" data-count="50">0</div>
+                <div className="stat-number" data-count="50">870+</div>
                 <div className="stat-label">Stories Created</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number" data-count="25">0</div>
+                <div className="stat-number" data-count="25">45</div>
                 <div className="stat-label">Countries Reached</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number" data-count="10000">0</div>
+                <div className="stat-number" data-count="10000">1.4m</div>
                 <div className="stat-label">Community Members</div>
               </div>
             </div>

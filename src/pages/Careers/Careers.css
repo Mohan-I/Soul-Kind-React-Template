@@ -24,6 +24,10 @@
   margin: 0 auto;
 }
 
+.norm-link{
+  text-decoration: none;
+}
+
 .careers-title {
   font-size: 4rem;
   background: linear-gradient(90deg, var(--light), var(--accent));

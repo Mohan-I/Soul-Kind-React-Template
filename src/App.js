@@ -1,17 +1,19 @@
 import './App.css';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { useEffect, useState, Suspense, lazy } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/common/header/header.js';
 import SoulKind from './pages/landing.js';
-import About from './pages/about/about.js';
-import Courses from './pages/courses.js';
+import About from './pages/about/About.js';
+import Courses from './pages/courses/courses.js';
 import CursorChaser from './components/common/cursorChaser.js';
-import Careers from './pages/Careers/careers.js';
+import Careers from './pages/careers/Careers.js';
 import BackToTop from './components/common/backTotop/backToTop.js';
 import TermsConditions from './pages/T&C_privacy_p/Termsconditions.js';
 import PrivacyPolicy from './pages/T&C_privacy_p/PrivacyPolicy.js';
 import Footer from './components/common/footer/footer.js';
 import Loader from './components/common/loader/loader.js';
+import Error404 from './pages/error/Error404.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -131,6 +133,7 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/terms" element={<TermsConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="*" element={<Error404 />} />
           </Routes>
         </Suspense>
         
