@@ -27,11 +27,11 @@ const AboutUs = () => {
                 <i className="fas fa-star"></i>
                 Our Story, Our Purpose
               </div>
-              <h1 className="video-hero-title">We Are Soul Kind</h1>
-              <p className="video-hero-text">
+              <h1 className="video-hero-title" data-aos="fade-right">We Are Soul Kind</h1>
+              <p className="video-hero-text" data-aos="fade-right">
                 A collective of dreamers, storytellers, and innovators dedicated to creating meaningful experiences that connect hearts across the globe through art, technology, and community.
               </p>
-              <div className="hero-stats">
+              <div className="hero-stats" data-aos="fade-up">
                 <div className="stat-circle">
                   <div className="stat-number">2019</div>
                   <div className="stat-label">Founded</div>
