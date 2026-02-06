@@ -16,6 +16,7 @@ import Loader from './components/common/loader/loader.js';
 import Error404 from './pages/error/Error404.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ContextMenu from './components/common/contextmenu/contextMenu.js';
 
 // Optional: Lazy load heavy components for better performance
 // const About = lazy(() => import('./pages/about/about.js'));
@@ -123,7 +124,7 @@ function App() {
         <ScrollToTop />
         <Header />
         <CursorChaser />
-        
+        <ContextMenu />
         {/* Suspense boundary for lazy loaded components */}
         <Suspense fallback={<Loader mini={true} />}>
           <Routes>

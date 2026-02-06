@@ -1,491 +1,436 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import avatar from '../../assets/img/icons/girl-avatar.svg'
+import './courses.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Courses = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
+  const courses = [
+    {
+      id: 1,
+      title: "Web Development Bootcamp",
+      description: "Master full-stack web development with modern technologies like React, Node.js, and MongoDB.",
+      duration: "12 weeks",
+      level: "Beginner",
+      price: "$499",
+      category: "Development",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      rating: 4.9,
+      students: 2450,
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Data Science & AI",
+      description: "Learn machine learning, data analysis, and artificial intelligence from industry experts.",
+      duration: "16 weeks",
+      level: "Intermediate",
+      price: "$699",
+      category: "Data Science",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      rating: 4.8,
+      students: 1890,
+      featured: true
+    },
+    {
+      id: 3,
+      title: "UI/UX Design Masterclass",
+      description: "Create stunning user interfaces and experiences with Figma and modern design principles.",
+      duration: "10 weeks",
+      level: "All Levels",
+      price: "$399",
+      category: "Design",
+      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      rating: 4.7,
+      students: 3120
+    },
+    {
+      id: 4,
+      title: "Digital Marketing Pro",
+      description: "Become a digital marketing expert with SEO, social media, and content strategy.",
+      duration: "8 weeks",
+      level: "Beginner",
+      price: "$349",
+      category: "Marketing",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      rating: 4.6,
+      students: 2750
+    },
+    {
+      id: 5,
+      title: "Mobile App Development",
+      description: "Build native and cross-platform mobile apps with React Native and Flutter.",
+      duration: "14 weeks",
+      level: "Intermediate",
+      price: "$599",
+      category: "Development",
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      rating: 4.8,
+      students: 1980
+    },
+    {
+      id: 6,
+      title: "Cybersecurity Fundamentals",
+      description: "Learn essential cybersecurity skills to protect systems and networks.",
+      duration: "12 weeks",
+      level: "Beginner to Intermediate",
+      price: "$549",
+      category: "Security",
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      rating: 4.9,
+      students: 1650
+    }
+  ];
+
+  const categories = [
+    "All Courses",
+    "Development",
+    "Data Science",
+    "Design",
+    "Marketing",
+    "Business",
+    "Security"
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Full-Stack Developer",
+      text: "The Web Development Bootcamp transformed my career. Landed a job within 2 months!",
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      course: "Web Development Bootcamp"
+    },
+    {
+      name: "Michael Chen",
+      role: "Data Scientist",
+      text: "The AI course gave me practical skills that I use daily at my job. Highly recommended!",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      course: "Data Science & AI"
+    },
+    {
+      name: "Priya Sharma",
+      role: "UI/UX Designer",
+      text: "From beginner to professional designer in 10 weeks. The curriculum is comprehensive.",
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      course: "UI/UX Design Masterclass"
+    }
+  ];
+
   return (
-    <div>
-  <main>
-    <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
-      <div className="col-md-6 p-lg-5 mx-auto my-5">
-        <h1 className="display-3 fw-bold">Designed for engineers</h1>
-        <h3 className="fw-normal text-muted mb-3">
-          Build anything you want with Aperture
-        </h3>
-        <div className="d-flex gap-3 justify-content-center lead fw-normal">
-          <a className="icon-link" href="#">
-            Learn more
-            <svg className="bi">
-              <use xlinkHref="#chevron-right" />
-            </svg>
-          </a>
-          <a className="icon-link" href="#">
-            Buy
-            <svg className="bi">
-              <use xlinkHref="#chevron-right" />
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div className="product-device shadow-sm d-none d-md-block" />
-      <div className="product-device product-device-2 shadow-sm d-none d-md-block" />
-    </div>
-  <div id="myCarousel" className="carousel slide mb-6" data-bs-ride="carousel">
-    <div className="carousel-indicators">
-      <button
-        type="button"
-        data-bs-target="#myCarousel"
-        data-bs-slide-to={0}
-        className="active"
-        aria-current="true"
-        aria-label="Slide 1"
-      />
-      <button
-        type="button"
-        data-bs-target="#myCarousel"
-        data-bs-slide-to={1}
-        aria-label="Slide 2"
-      />
-      <button
-        type="button"
-        data-bs-target="#myCarousel"
-        data-bs-slide-to={2}
-        aria-label="Slide 3"
-      />
-    </div>
-    <div className="carousel-inner">
-      <div className="carousel-item active">
-        <svg
-          className="bd-placeholder-img"
-          width="100%"
-          height="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-        </svg>
+    <div className="courses-page">
+      {/* Hero Section */}
+      <section className="courses-hero" data-aos="fade-up">
         <div className="container">
-          <div className="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p className="opacity-75">
-              Some representative placeholder content for the first slide of the
-              carousel.
-            </p>
-            <p>
-              <a className="btn btn-lg btn-primary" href="#">
-                Sign up today
-              </a>
-            </p>
+          <div className="row align-items-center min-vh-80">
+            <div className="col-lg-6">
+              <div className="hero-content">
+                <span className="badge bg-primary-subtle text-primary mb-3">🎓 Transform Your Career</span>
+                <h1 className="display-4 fw-bold mb-4">
+                  Master <span className="text-gradient">In-Demand</span> Skills
+                </h1>
+                <p className="lead mb-4">
+                  Join 10,000+ students who've transformed their careers with our industry-leading courses. 
+                  Learn from experts, build real projects, and get job-ready.
+                </p>
+                <div className="d-flex gap-3">
+                  <button className="btn btn-primary btn-lg px-4">
+                    Explore Courses
+                  </button>
+                  <button className="btn btn-outline-primary btn-lg px-4">
+                    Watch Demo
+                  </button>
+                </div>
+                <div className="mt-4 d-flex align-items-center gap-4">
+                  <div className="d-flex align-items-center">
+                    <div className="avatar-group">
+                      {[1,2,3,4,5].map(i => (
+                        <img 
+                          key={i}
+                          src={avatar}
+                          alt={`Student ${i}`}
+                          className="avatar"
+                        />
+                      ))}
+                    </div>
+                    <span className="ms-3 ">10K+ Students Enrolled</span>
+                  </div>
+                  <div className="rating">
+                    <span className="stars">★★★★★</span>
+                    <span className="ms-2 ">4.8/5.0 Rating</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="hero-image">
+                <div className="floating-card card-1">
+                    <h6>Web Development</h6>
+                    <p className="small">12 Weeks Course</p>
+                </div>
+                <div className="floating-card card-2">
+                    <h6>Data Science</h6>
+                    <p className="small">16 Weeks Course</p>
+                </div>
+                <div className="floating-card card-3">
+                    <h6>UI/UX Design</h6>
+                    <p className="small">10 Weeks Course</p>
+                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Students learning"
+                  className="img-fluid rounded-3 shadow-lg"
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="carousel-item">
-        <svg
-          className="bd-placeholder-img"
-          width="100%"
-          height="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-        </svg>
-        <div className="container">
-          <div className="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>
-              Some representative placeholder content for the second slide of
-              the carousel.
-            </p>
-            <p>
-              <a className="btn btn-lg btn-primary" href="#">
-                Learn more
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="carousel-item">
-        <svg
-          className="bd-placeholder-img"
-          width="100%"
-          height="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-        </svg>
-        <div className="container">
-          <div className="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>
-              Some representative placeholder content for the third slide of
-              this carousel.
-            </p>
-            <p>
-              <a className="btn btn-lg btn-primary" href="#">
-                Browse gallery
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button
-      className="carousel-control-prev"
-      type="button"
-      data-bs-target="#myCarousel"
-      data-bs-slide="prev"
-    >
-      <span className="carousel-control-prev-icon" aria-hidden="true" />
-      <span className="visually-hidden">Previous</span>
-    </button>
-    <button
-      className="carousel-control-next"
-      type="button"
-      data-bs-target="#myCarousel"
-      data-bs-slide="next"
-    >
-      <span className="carousel-control-next-icon" aria-hidden="true" />
-      <span className="visually-hidden">Next</span>
-    </button>
-  </div>
-  {/* Marketing messaging and featurettes
-  ================================================== */}
-  {/* Wrap the rest of the page in another container to center all the content. */}
-  <div className="container marketing">
-    {/* Three columns of text below the carousel */}
-    <div className="row">
-      <div className="col-lg-4">
-        <svg
-          className="bd-placeholder-img rounded-circle"
-          width={140}
-          height={140}
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-        </svg>
-        <h2 className="fw-normal">Heading</h2>
-        <p>
-          Some representative placeholder content for the three columns of text
-          below the carousel. This is the first column.
-        </p>
-        <p>
-          <a className="btn btn-secondary" href="#">
-            View details »
-          </a>
-        </p>
-      </div>
-      {/* /.col-lg-4 */}
-      <div className="col-lg-4">
-        <svg
-          className="bd-placeholder-img rounded-circle"
-          width={140}
-          height={140}
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-        </svg>
-        <h2 className="fw-normal">Heading</h2>
-        <p>
-          Another exciting bit of representative placeholder content. This time,
-          we've moved on to the second column.
-        </p>
-        <p>
-          <a className="btn btn-secondary" href="#">
-            View details »
-          </a>
-        </p>
-      </div>
-      {/* /.col-lg-4 */}
-      <div className="col-lg-4">
-        <svg
-          className="bd-placeholder-img rounded-circle"
-          width={140}
-          height={140}
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-        </svg>
-        <h2 className="fw-normal">Heading</h2>
-        <p>
-          And lastly this, the third column of representative placeholder
-          content.
-        </p>
-        <p>
-          <a className="btn btn-secondary" href="#">
-            View details »
-          </a>
-        </p>
-      </div>
-      {/* /.col-lg-4 */}
-    </div>
-    {/* /.row */}
-    {/* START THE FEATURETTES */}
-    <hr className="featurette-divider" />
-    <div className="row featurette">
-      <div className="col-md-7">
-        <h2 className="featurette-heading fw-normal lh-1">
-          First featurette heading.{" "}
-          <span className="text-body-secondary">It’ll blow your mind.</span>
-        </h2>
-        <p className="lead">
-          Some great placeholder content for the first featurette here. Imagine
-          some exciting prose here.
-        </p>
-      </div>
-      <div className="col-md-5">
-        <svg
-          className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-          width={500}
-          height={500}
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" />
-          <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-            500x500
-          </text>
-        </svg>
-      </div>
-    </div>
-    <hr className="featurette-divider" />
-    <div className="row featurette">
-      <div className="col-md-7 order-md-2">
-        <h2 className="featurette-heading fw-normal lh-1">
-          Oh yeah, it’s that good.{" "}
-          <span className="text-body-secondary">See for yourself.</span>
-        </h2>
-        <p className="lead">
-          Another featurette? Of course. More placeholder content here to give
-          you an idea of how this layout would work with some actual real-world
-          content in place.
-        </p>
-      </div>
-      <div className="col-md-5 order-md-1">
-        <svg
-          className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-          width={500}
-          height={500}
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" />
-          <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-            500x500
-          </text>
-        </svg>
-      </div>
-    </div>
-    <hr className="featurette-divider" />
-    <div className="row featurette">
-      <div className="col-md-7">
-        <h2 className="featurette-heading fw-normal lh-1">
-          And lastly, this one.{" "}
-          <span className="text-body-secondary">Checkmate.</span>
-        </h2>
-        <p className="lead">
-          And yes, this is the last block of representative placeholder content.
-          Again, not really intended to be actually read, simply here to give
-          you a better view of what this would look like with some actual
-          content. Your content.
-        </p>
-      </div>
-      <div className="col-md-5">
-        <svg
-          className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-          width={500}
-          height={500}
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" />
-          <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-            500x500
-          </text>
-        </svg>
-      </div>
-    </div>
-    <hr className="featurette-divider" />
-    {/* /END THE FEATURETTES */}
-  </div>
-  {/* /.container */}
-  {/* FOOTER */}
-  <footer className="container py-5">
-    <div className="row">
-      <div className="col-12 col-md">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={24}
-          height={24}
-          fill="none"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          className="d-block mb-2"
-          role="img"
-          viewBox="0 0 24 24"
-        >
-          <title>Product</title>
-          <circle cx={12} cy={12} r={10} />
-          <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
-        </svg>
-        <small className="d-block mb-3 text-body-secondary">© 2017–2024</small>
-      </div>
-      <div className="col-6 col-md">
-        <h5>Features</h5>
-        <ul className="list-unstyled text-small">
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Cool stuff
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Random feature
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Team feature
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Stuff for developers
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Another one
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Last time
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className="col-6 col-md">
-        <h5>Resources</h5>
-        <ul className="list-unstyled text-small">
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Resource name
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Resource
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Another resource
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Final resource
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className="col-6 col-md">
-        <h5>Resources</h5>
-        <ul className="list-unstyled text-small">
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Business
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Education
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Government
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Gaming
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className="col-6 col-md">
-        <h5>About</h5>
-        <ul className="list-unstyled text-small">
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Team
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Locations
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Privacy
-            </a>
-          </li>
-          <li>
-            <a className="link-secondary text-decoration-none" href="#">
-              Terms
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <p className="float-end">
-      <a href="#">Back to top</a>
-    </p>
-    <p>
-      © 2017–2024 Company, Inc. · <a href="#">Privacy</a> ·{" "}
-      <a href="#">Terms</a>
-    </p>
-  </footer>
-</main>
+      </section>
 
-    </div>
-  )
-}
+      {/* Categories Filter */}
+      <section className="categories-section py-5" data-aos="fade-up">
+        <div className="container">
+          <div className="d-flex flex-wrap gap-2 justify-content-center">
+            {categories.map((category, index) => (
+              <button 
+                key={index}
+                className={`btn ${index === 0 ? 'btn-primary' : 'btn-outline-primary'}`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
 
-export default Courses
+      {/* Featured Courses */}
+      <section className="featured-courses py-5" data-aos="fade-up">
+        <div className="container">
+          <div className="text-center mb-5">
+            <h2 className="fw-bold">Featured Courses</h2>
+            <p className="">Hand-picked courses to kickstart your learning journey</p>
+          </div>
+          
+          <div className="row g-4">
+            {courses.filter(course => course.featured).map((course) => (
+              <div key={course.id} className="col-lg-6" data-aos="zoom-in">
+                <div className="course-card featured h-100">
+                  <div className="row g-0 h-100">
+                    <div className="col-md-5">
+                      <div className="course-image">
+                        <img src={course.image} alt={course.title} className="img-fluid" />
+                        <span className="badge bg-primary position-absolute top-0 end-0 m-3">
+                          Featured
+                        </span>
+                      </div>
+                      
+                        
+                    </div>
+                    <div className="col-md-7">
+                      <div className="card-body p-4">
+                        <div className="d-flex justify-content-between align-items-start">
+                          <span className="badge bg-light text-dark">{course.category}</span>
+                          <span className="text-warning">★ {course.rating}</span>
+                        </div>
+                        <h5 className="fw-bold my-4">{course.title}</h5>
+                        <p className=" mb-4">{course.description}</p>
+
+                        <div className="course-meta mb-4">
+                          <div className="d-flex gap-4">
+                            <div>
+                              <span className='badge bg-dark'>{course.duration}</span>
+                            </div>
+                            <div>
+                              <span className='badge bg-dark'>{course.students} students</span>
+                            </div>
+                            <div>
+                              <span className='badge bg-dark'>{course.level}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="d-flex justify-content-between align-items-center">
+                          <h4 className="text-primary mb-0">{course.price}</h4>
+                          <button className="btn btn-primary">
+                            Enroll Now
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* All Courses Grid */}
+      <section className="all-courses py-8 mx-4" data-aos="fade-up">
+        <div className="container">
+          <div className="text-center mb-5">
+            <h2 className="fw-bold">Explore All Courses</h2>
+            <p className="">Choose from our comprehensive catalog</p>
+          </div>
+          
+          <div className="row g-4">
+            {courses.map((course) => (
+              <div key={course.id} className="col-md-6 col-lg-4" data-aos="flip-up">
+                <div className="course-card h-100">
+                  <div className="course-image">
+                    <img src={course.image} alt={course.title} className="img-fluid" />
+                    <span className="badge bg-dark position-absolute top-0 end-0 m-3">
+                      {course.category} - <span className='text-warning'>★ {course.rating}</span>
+                    </span>
+                  </div>
+                  <div className="card-body">
+                    <div className="d-flex justify-content-between align-items-start mb-2">        
+                    </div>
+                    <h5 className="fw-bold mb-3">{course.title} - <span className="text-warning">{course.price}</span> </h5>
+                    <p className=" mb-4">{course.description}</p> 
+     
+                    <div className="d-flex justify-content-between align-items-center">
+                      <span className="badge bg-dark text-secondary">{course.duration}</span>
+                      <span className="badge bg-dark text-secondary">{course.students}</span>
+                      <span className="badge bg-dark text-secondary">{course.level}</span>
+                      <span className="text-warning"> - </span>
+
+                      <button className="btn btn-outline-secondary">
+                        Learn More
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="why-choose py-5" data-aos="fade-up">
+        <div className="container">
+          <div className="text-center mb-5">
+            <h2 className="fw-bold">Why Choose SoulKind Courses?</h2>
+            <p className="">We're different from traditional learning platforms</p>
+          </div>
+          
+          <div className="row g-4">
+            <div className="col-md-4" data-aos="zoom-in">
+              <div className="feature-card text-center p-4 h-100">
+                <div className="feature-icon mb-4">
+                  <div className="icon-wrapper">
+                    <i className="bi bi-laptop text-primary fs-1"></i>
+                  </div>
+                </div>
+                <h4 className="fw-bold mb-3">Project-Based Learning</h4>
+                <p className="">
+                  Learn by building real-world projects that you can showcase in your portfolio.
+                </p>
+              </div>
+            </div>
+            
+            <div className="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+              <div className="feature-card text-center p-4 h-100">
+                <div className="feature-icon mb-4">
+                  <div className="icon-wrapper">
+                    <i className="bi bi-people text-primary fs-1"></i>
+                  </div>
+                </div>
+                <h4 className="fw-bold mb-3">Industry Mentors</h4>
+                <p className="">
+                  Get guidance from industry professionals working at top tech companies.
+                </p>
+              </div>
+            </div>
+            
+            <div className="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+              <div className="feature-card text-center p-4 h-100">
+                <div className="feature-icon mb-4">
+                  <div className="icon-wrapper">
+                    <i className="bi bi-briefcase text-primary fs-1"></i>
+                  </div>
+                </div>
+                <h4 className="fw-bold mb-3">Career Support</h4>
+                <p className="">
+                  Resume reviews, interview prep, and job placement assistance included.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="testimonials py-5 bg-dark text-white" data-aos="fade-up">
+        <div className="container">
+          <div className="text-center mb-5">
+            <h2 className="fw-bold">Student Success Stories</h2>
+            <p className="text-light">See what our students have to say</p>
+          </div>
+          
+          <div className="row g-4">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="col-md-4" data-aos="flip-left">
+                <div className="testimonial-card h-100">
+                  <div className="card-body p-4">
+                    <div className="d-flex align-items-center mb-4">
+                      <img 
+                        src={testimonial.avatar} 
+                        alt={testimonial.name}
+                        className="rounded-circle me-3"
+                        width="50"
+                        height="50"
+                      />
+                      <div>
+                        <h6 className="mb-0">{testimonial.name}</h6>
+                        <small className="text-light">{testimonial.role}</small>
+                      </div>
+                    </div>
+                    <p className="mb-4">"{testimonial.text}"</p>
+                    <div className="course-badge">
+                      <span className="badge bg-primary">{testimonial.course}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta-section py-5" data-aos="fade-up">
+        <div className="container">
+          <div className="cta-card rounded-4 p-5 text-center text-white">
+            <h2 className="fw-bold mb-4">Ready to Start Your Journey?</h2>
+            <p className="mb-4">
+              Join thousands of successful graduates who transformed their careers with our courses.
+            </p>
+            <div className="d-flex gap-3 justify-content-center">
+              <button className="btn btn-light btn-lg px-5">
+                Browse All Courses
+              </button>
+              <button className="btn btn-outline-light btn-lg px-5">
+                Schedule a Call
+              </button>
+            </div>
+            <p className="mt-4 mb-0 small">
+              <i className="bi bi-shield-check me-1"></i>
+              <span>30-day money-back guarantee • Flexible payment options</span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Courses;
