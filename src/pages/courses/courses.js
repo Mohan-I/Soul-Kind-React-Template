@@ -369,7 +369,7 @@ const Courses = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="testimonials py-5 bg-dark text-white" data-aos="fade-up">
+      <section className="testimonials py-5 bg-slate-800 text-white" data-aos="fade-up">
         <div className="container">
           <div className="text-center mb-5">
             <h2 className="fw-bold">Student Success Stories</h2>
@@ -378,7 +378,7 @@ const Courses = () => {
           
           <div className="row g-4">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="col-md-4" data-aos="flip-left">
+              <div key={index} className="col-md-4" data-aos="zoom-in-up">
                 <div className="testimonial-card h-100">
                   <div className="card-body p-4">
                     <div className="d-flex align-items-center mb-4">
