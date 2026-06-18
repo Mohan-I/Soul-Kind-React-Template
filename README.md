@@ -336,5 +336,5 @@ For support, email on mohan-i.vercel.app or join our Discord community.
 ---
 
 **Built with ❤️ by the Soul Kind Creative Studio (Mohan Yadav)**
-
+- last updated  Feb 2026
 ---
